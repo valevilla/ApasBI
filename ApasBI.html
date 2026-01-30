@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApasBi | Waste to Energy Intelligence Nigeria</title>
+    <meta name="description" content="ApasBi bridges the gap between biomass waste and clean energy in Nigeria through intelligent logistics and SaaS monitoring.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-mesh {
+            background-color: #022c22;
+            background-image: radial-gradient(at 0% 0%, hsla(161,94%,30%,1) 0, transparent 50%), 
+                              radial-gradient(at 50% 0%, hsla(161,94%,15%,1) 0, transparent 50%);
+        }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900" x-data="{ mobileMenu: false }">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="leaf" class="text-white w-5 h-5"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tight text-emerald-900">ApasBi</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+                <a href="#problem" class="hover:text-emerald-600 transition">The Problem</a>
+                <a href="#solution" class="hover:text-emerald-600 transition">Solution</a>
+                <a href="#market" class="hover:text-emerald-600 transition">Market</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="mailto:contact@apasbi.com" class="bg-emerald-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-200">
+                    Partner with Us
+                </a>
+            </div>
+
+            <button class="md:hidden" @click="mobileMenu = !mobileMenu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div x-show="mobileMenu" class="md:hidden bg-white border-b p-6 space-y-4" x-transition>
+            <a href="#problem" class="block font-semibold">The Problem</a>
+            <a href="#solution" class="block font-semibold">The App</a>
+            <a href="#market" class="block font-semibold">Market</a>
+            <hr>
+            <a href="mailto:contact@apasbi.com" class="block text-emerald-600 font-bold">Contact Support</a>
+        </div>
+    </nav>
+
+    <header class="hero-mesh text-white pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <span class="inline-block px-4 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-bold tracking-wide uppercase">
+                    Nigeria's First Digital Biomass Network
+                </span>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1]">
+                    Turning Waste into <span class="text-emerald-400 underline decoration-emerald-500/30">Digital Gold.</span>
+                </h1>
+                <p class="text-xl text-emerald-100/80 leading-relaxed max-w-lg">
+                    ApasBi synchronizes biomass suppliers with biogas plants via real-time geolocation and predictive analytics. 
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-white text-emerald-900 px-8 py-4 rounded-xl text-lg font-bold hover:bg-emerald-50 transition-transform active:scale-95 shadow-xl">
+                        Request Demo
+                    </button>
+                    <button class="glass px-8 py-4 rounded-xl text-lg font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="file-text" class="w-5 h-5"></i> Whitepaper
+                    </button>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="bg-emerald-500/10 rounded-3xl p-4 border border-white/10 overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="Tech Dashboard" class="rounded-2xl opacity-90 grayscale hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl hidden lg:block">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-emerald-100 p-3 rounded-full text-emerald-600">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-500 font-medium">Plant Efficiency</p>
+                            <p class="text-xl font-bold text-slate-900">+34.2% Optimization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="problem" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-slate-500 uppercase tracking-widest font-bold text-sm mb-4">The Market Opportunity</h2>
+                <p class="text-3xl md:text-4xl font-bold text-slate-900">Nigeria is bleeding energy potential</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-10 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-200 transition">
+                    <h3 class="text-6xl font-black text-emerald-600 mb-4">$100M+</h3>
+                    <p class="text-lg font-bold mb-2 text-slate-800">Annual Revenue Loss</p>
+                    <p class="text-slate-500 leading-relaxed">Economic value lost due to fragmented waste logistics and untapped biomass.</p>
+                </div>
+                <div class="p-10 rounded-3xl bg-emerald-600 text-white shadow-2xl shadow-emerald-200 scale-105">
+                    <h3 class="text-6xl font-black mb-4">25.5B</h3>
+                    <p class="text-lg font-bold mb-2">Cubic Meters Potential</p>
+                    <p class="text-emerald-100 leading-relaxed">Untapped Biogas volume that could power millions of homes today.</p>
+                </div>
+                <div class="p-10 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-200 transition">
+                    <h3 class="text-6xl font-black text-emerald-600 mb-4">0%</h3>
+                    <p class="text-lg font-bold mb-2 text-slate-800">Efficiency Rate</p>
+                    <p class="text-slate-500 leading-relaxed">Current digital integration in Nigeria's decentralized waste-to-energy supply chain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" class="py-24 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-20 items-center">
+                <div class="lg:w-1/2 space-y-8">
+                    <h2 class="text-4xl font-bold leading-tight">The ApasBi Digital Ecosystem</h2>
+                    <p class="text-lg text-slate-600">We solve the "last mile" biomass problem through a dual-service approach.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4 p-4 rounded-2xl bg-white shadow-sm border border-slate-100">
+                            <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Smart Geotagging</h4>
+                                <p class="text-slate-500">Connecting agro-waste hubs directly with energy producers via real-time mapping.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded-2xl bg-white shadow-sm border border-slate-100">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
+                                <i data-lucide="bar-chart-3"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Predictive SaaS</h4>
+                                <p class="text-slate-500">AI-driven plant monitoring to prevent downtime and optimize methane yields.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 bg-emerald-900 rounded-[3rem] p-12 relative">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                    <div class="relative z-10 text-white space-y-6">
+                        <div class="p-6 bg-white/10 rounded-2xl border border-white/20">
+                            <p class="text-sm opacity-60 mb-2 font-mono">SYSTEM_LOG // PLANT_DELTA_LFG</p>
+                            <div class="h-24 flex items-end gap-2">
+                                <div class="w-full bg-emerald-400 h-[60%] rounded-t"></div>
+                                <div class="w-full bg-emerald-400 h-[80%] rounded-t"></div>
+                                <div class="w-full bg-emerald-400 h-[40%] rounded-t"></div>
+                                <div class="w-full bg-emerald-400 h-[90%] rounded-t"></div>
+                            </div>
+                        </div>
+                        <h4 class="text-2xl font-bold">Nigeria's First SaaS for Biogas</h4>
+                        <p class="text-emerald-100/70 italic">"Finalizing MVP architecture for pilot deployment in high-density agricultural hubs."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="market" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12 italic text-slate-400">Targeting Nigeria’s multi-billion dollar decentralized energy market.</h2>
+            <div class="flex flex-wrap justify-center gap-12 opacity-50 grayscale">
+                <span class="text-2xl font-bold tracking-tighter">AGRI-HUB NG</span>
+                <span class="text-2xl font-bold tracking-tighter">CLEAN-ENERGY AF</span>
+                <span class="text-2xl font-bold tracking-tighter">LAGOS-WASTE</span>
+                <span class="text-2xl font-bold tracking-tighter">ECO-FUND</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-20 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold mb-4">Ready to fuel the future?</h2>
+            <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">Join us as a partner, investor, or early adopter in reshaping the Nigerian energy landscape.</p>
+            <div class="flex flex-wrap justify-center gap-6 mb-16">
+                <a href="mailto:invest@apasbi.com" class="bg-emerald-600 hover:bg-emerald-500 px-10 py-4 rounded-full font-bold transition flex items-center gap-3">
+                    Contact our Founder <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-sm text-slate-500 pt-10 border-t border-white/5">
+                <p>&copy; 2026 ApasBi Technologies Ltd.</p>
+                <p>Lagos • Abuja • Port Harcourt</p>
+                <div class="flex justify-center gap-4">
+                    <a href="#" class="hover:text-white">LinkedIn</a>
+                    <a href="#" class="hover:text-white">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
